@@ -1,1 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  /* ────────────────────── Fonts ────────────────────── */
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* ────────────────────── Colors ────────────────────── */
+
+  /* Purple */
+  --color-purple: #7c5cfc;
+  --color-purple-light: #a78bfa;
+
+  /* Backgrounds */
+  --color-bg: #0f0f13;
+  --color-nav: #0c0c10; /* navigation and footer */
+  --color-surface: #1a1a24; /* cards and modals */
+  --color-surface-light: #22222f; /* input fields */
+
+  /* Text */
+  --color-white: #f0effe; /* primary text */
+  --color-muted: #8882a8; /* secondary text */
+
+  /* Borders */
+  --color-border: #2e2e3f;
+
+  /* ────────────────────── Border radius ────────────────────── */
+  --radius-default: 0.5rem; /* 8px */
+  --radius-card: 0.75rem; /* 12px */
+  --radius-full: 9999px; /* fully rounded */
+
+  /* ────────────────────── Gradients ────────────────────── */
+  --gradient-purple: linear-gradient(90deg, #7d5dfc, #a78afa);
+}
+
+@utility bg-gradient-purple {
+  background: var(--gradient-purple);
+}
+
+.btn-primary {
+  @apply bg-gradient-purple rounded-default cursor-pointer px-6 py-2 font-bold;
+}
+
+.btn-secondary {
+  @apply text-muted rounded-default cursor-pointer px-6 py-2 font-bold;
+}
+
+.link-underline {
+  @apply text-purple-light cursor-pointer hover:underline;
+}

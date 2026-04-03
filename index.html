@@ -4,13 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <h1 class="bg-red-500 text-3xl font-bold text-white underline">
-    Hello World
-  </h1>
+<body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
+  <header class="bg-nav border-border border-b p-4 px-32 text-white">
+    <nav class="mx-auto flex items-center justify-between text-base">
+      <p>Logo</p>
+      <ul class="flex items-center space-x-4">
+        <li><a href="#" class="text-muted">Explore</a></li>
+        <li><a href="#" class="text-muted">About</a></li>
+        <li>
+          <button class="btn-primary">Get started</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="grid grid-cols-2 gap-16 text-white">
+    <section class="flex flex-col items-start justify-center gap-10 p-32">
+      <h1 class="text-7xl leading-24 font-bold">
+        Every idea starts with a
+        <span class="text-purple-light">thread.</span>
+      </h1>
+      <p class="text-muted text-xl">
+        Thread is the social network built around conversations. Post your
+        thoughts, follow the people who matter, and let ideas weave together.
+      </p>
+    </section>
+
+    <section class="bg-surface border-border border-l px-60">
+      <div class="my-auto flex h-full flex-col justify-center">
+        <div class="flex flex-col gap-2">
+          <h2 class="text-4xl font-semibold">Welcome back!</h2>
+          <p class="text-muted text-lg">Sign in to your account</p>
+        </div>
+        <nav class="rounded-card bg-bg mt-6 flex gap-4 p-1 text-sm">
+          <button class="btn-primary w-full">Sign in</button>
+          <button class="btn-secondary w-full">Register</button>
+        </nav>
+        <form class="mt-6 flex flex-col gap-4">
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="email" class="text-muted text-sm uppercase">Email</label>
+              <input type="email" id="email" placeholder="Email" required
+                class="rounded-default bg-bg border-border border p-3" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="password" class="text-muted text-sm uppercase">Password</label>
+              <input type="password" id="password" placeholder="Password" required
+                class="rounded-default bg-bg border-border border p-3" />
+            </div>
+          </div>
+          <p class="link-underline text-sm ml-auto">Forgot Password?</p>
+          <button class="btn-primary mt-4">Sign in</button>
+          <div class="my-4 flex items-center text-sm">
+            <div class="bg-border h-px flex-1"></div>
+            <span class="text-muted mx-4">or continue with</span>
+            <div class="bg-border h-px flex-1"></div>
+          </div>
+          <div class="mb-4 flex flex-row gap-4 text-sm">
+            <button type="button"
+              class="rounded-default border-border bg-surface-light flex w-full cursor-pointer items-center justify-center gap-2 border px-3 py-2 text-white">
+              <i class="fa-brands fa-google text-gray-muted text-2xl"></i>
+              Google
+            </button>
+            <button type="button"
+              class="rounded-default border-border bg-surface-light flex w-full cursor-pointer items-center justify-center gap-2 border px-3 py-2 text-white">
+              <i class="fa-brands fa-facebook text-gray-muted text-2xl"></i>
+              Facebook
+            </button>
+          </div>
+          <p class="text-muted text-center text-sm">
+            By signing in you agree to our
+            <span class="link-underline">Terms</span> and
+            <span class="link-underline">Privacy Policy</span>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer
+    class="bg-nav text-muted border-border flex flex-row items-center justify-between border-t p-4 px-32 text-base">
+    &copy; 2026 Thread Inc.
+    <ul class="flex justify-center space-x-4">
+      <li><a href="#" class="hover:underline">Privacy</a></li>
+      <li><a href="#" class="hover:underline">Terms</a></li>
+      <li><a href="#" class="hover:underline">Support</a></li>
+    </ul>
+  </footer>
 </body>
 
 </html>
