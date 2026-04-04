@@ -27,6 +27,7 @@
 
   /* ────────────────────── Border radius ────────────────────── */
   --radius-default: 0.5rem; /* 8px */
+  --radius-icon: 0.375rem; /* 6px */
   --radius-card: 0.75rem; /* 12px */
   --radius-full: 9999px; /* fully rounded */
 
@@ -39,13 +40,25 @@
 }
 
 .btn-primary {
-  @apply bg-gradient-purple rounded-default cursor-pointer px-6 py-2 font-bold;
+  @apply bg-gradient-purple rounded-default flex cursor-pointer items-center justify-center gap-1 px-4 py-2 font-bold text-white;
 }
 
 .btn-secondary {
   @apply text-muted rounded-default cursor-pointer px-6 py-2 font-bold;
 }
 
+.btn-icon {
+  @apply rounded-icon bg-surface border-border cursor-pointer border p-2.5 text-white;
+}
+
+.icon {
+  @apply h-[18px] w-[18px];
+}
+
 .link-underline {
   @apply text-purple-light cursor-pointer hover:underline;
+}
+
+.tag {
+  @apply rounded-default bg-surface text-purple-light px-4 py-1 text-sm font-medium;
 }

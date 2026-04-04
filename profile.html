@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
+  <header class="bg-nav border-border border-b p-4 px-8 md:px-32 text-white mb-10">
+    <nav class="mx-auto flex items-center justify-between text-base">
+      <p>Logo</p>
+      <ul class="flex items-center space-x-4">
+        <li>
+          <button class="btn-icon"><i data-lucide="bell-ring" class="icon" stroke-width="1.5"></i> </button>
+        </li>
+        <li><a href="/profile.html"><img src="./assets/images/profile.jpg" alt="Profile image"
+              class="size-10 rounded-full border border-purple object-cover" /></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="text-white md:w-3xl mx-8 md:mx-auto">
+    <h1 class="sr-only">Profile page</h1>
+    <section class="border-border border rounded-card overflow-hidden">
+      <!-- Profile Header -->
+      <div>
+        <!-- Banner and Profile Image -->
+        <div class="relative">
+          <img src="./assets/images/gradient-banner.jpg" alt="Profile image" class="w-full h-52 object-cover" />
+          <img src="./assets/images/profile.jpg" alt="Profile image"
+            class="size-32 rounded-full object-cover absolute z-10 bottom-0 left-4 translate-y-1/2" />
+        </div>
+        <!-- Profile Actions -->
+        <div class="flex flex-row items-center gap-4 px-6 justify-end my-3">
+          <button class="btn-primary"><i data-lucide="plus"></i> Follow</button>
+          <button class="btn-icon"><i data-lucide="send" class="icon" stroke-width="1.5"></i> </button>
+          <button class="btn-icon"><i data-lucide="ellipsis" class="icon" stroke-width="1.5"></i> </button>
+        </div>
+        <!-- User Info -->
+        <div class="flex flex-col gap-0.5 p-6">
+          <div class="flex flex-row items-center gap-1">
+            <h2 class="text-xl font-semibold">Helene Syre</h2>
+            <i data-lucide="badge-check" class="w-6 h-6 text-purple font-light" stroke-width="1.5"></i>
+          </div>
+          <p class="text-muted">@helenesyre · Joined March 2026</p>
+        </div>
+        <!-- Bio -->
+        <div class="px-6 max-w-xl flex flex-col gap-3">
+          <p class="text-white/80">Bibendum et nec ante dolor. Ac mattis consectetur enim eu amet aliquam adipiscing.
+            Duis
+            tristique faucibus
+            imperdiet tincidunt vehicula.</p>
+          <div class="flex flex-row items-center gap-1">
+            <i data-lucide="link" class="icon text-purple font-light" stroke-width="1.5"></i>
+            <p class="text-purple">helenesyre.no</p>
+          </div>
+          <!-- Tags -->
+          <div class="flex flex-row items-center gap-3">
+            <span class="tag">#photography</span>
+            <span class="tag">#travel</span>
+            <span class="tag">#food</span>
+          </div>
+        </div>
+      </div>
+      <!-- Stats -->
+      <div class="flex flex-row items-center justify-center gap-6 md:gap-10 px-6 py-8 my-6 border-y border-border">
+        <div>
+          <p class="text-white font-bold text-2xl md:text-3xl">318</p>
+          <p class="text-muted text-sm md:text-base">Posts</p>
+        </div>
+        <div>
+          <p class="text-white font-bold text-2xl md:text-3xl">1.2K</p>
+          <p class="text-muted text-sm md:text-base">Followers</p>
+        </div>
+        <div>
+          <p class="text-white font-bold text-2xl md:text-3xl">481</p>
+          <p class="text-muted text-sm md:text-base">Following</p>
+        </div>
+        <div>
+          <p class="text-white font-bold text-2xl md:text-3xl">72.4k</p>
+          <p class="text-muted text-sm md:text-base">Likes</p>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div class="px-6">
+        <nav class="flex flex-row items-center justify-center gap-4 md:gap-10">
+          <div class="relative">
+            <button class="px-4 md:px-8 mb-3 text-white text-sm md:text-base font-semibold">Posts</button>
+            <div class="absolute left-0 right-0 h-1 bg-purple rounded-full"></div>
+          </div>
+          <div class="relative">
+            <button class="px-4 md:px-8 mb-3 text-muted text-sm md:text-base font-semibold">Reposts</button>
+            <div class="absolute left-0 right-0 h-1 bg-border rounded-full"></div>
+          </div>
+          <div class="relative">
+            <button class="px-4 md:px-8 mb-3 text-muted text-sm md:text-base font-semibold">Highlights</button>
+            <div class="absolute left-0 right-0 h-1 bg-border rounded-full"></div>
+          </div>
+          <div class="relative">
+            <button class="px-4 md:px-8 mb-3 text-muted text-sm md:text-base font-semibold">Tagged</button>
+            <div class="absolute left-0 right-0 h-1 bg-border rounded-full"></div>
+          </div>
+        </nav>
+      </div>
+      <div>
+        <p class="text-muted text-center py-10">No posts yet...</p>
+      </div>
+    </section>
+  </main>
+  <footer
+    class="bg-nav text-muted border-border flex flex-col md:flex-row items-center justify-between border-t p-4 px-32 mt-10 gap-2 md:gap-0 text-base">
+    <p>&copy; 2026 Thread Inc.</p>
+    <ul class="flex justify-center space-x-4">
+      <li><a href="#" class="hover:underline">Privacy</a></li>
+      <li><a href="#" class="hover:underline">Terms</a></li>
+      <li><a href="#" class="hover:underline">Support</a></li>
+    </ul>
+  </footer>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
