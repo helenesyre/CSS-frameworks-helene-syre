@@ -13,49 +13,60 @@
 </head>
 
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
-  <header class="bg-nav border-border border-b p-4 px-8 md:px-32 text-white mb-10">
+  <header class="bg-nav border-border mb-10 border-b p-4 px-8 text-white md:px-32">
     <nav class="mx-auto flex items-center justify-between text-base">
       <p>Logo</p>
       <ul class="flex items-center space-x-4">
         <li>
-          <button class="btn-icon"><i data-lucide="bell-ring" class="icon" stroke-width="1.5"></i> </button>
+          <button class="btn-icon">
+            <i data-lucide="bell-ring" class="icon" stroke-width="1.5"></i>
+          </button>
         </li>
-        <li><a href="/profile.html"><img src="./assets/images/profile.jpg" alt="Profile image"
-              class="size-10 rounded-full border border-purple object-cover" /></a></li>
+        <li>
+          <a href="/profile.html"><img src="./assets/images/profile.jpg" alt="Profile image"
+              class="border-purple size-10 rounded-full border object-cover" /></a>
+        </li>
       </ul>
     </nav>
   </header>
-  <main class="text-white md:w-3xl mx-8 md:mx-auto">
+  <main class="mx-8 text-white md:mx-auto md:w-3xl">
     <h1 class="sr-only">Profile page</h1>
-    <section class="border-border border rounded-card overflow-hidden">
+    <section class="border-border rounded-card overflow-hidden border">
       <!-- Profile Header -->
       <div>
         <!-- Banner and Profile Image -->
         <div class="relative">
-          <img src="./assets/images/gradient-banner.jpg" alt="Profile image" class="w-full h-52 object-cover" />
+          <img src="./assets/images/gradient-banner.jpg" alt="Profile image" class="h-52 w-full object-cover" />
           <img src="./assets/images/profile.jpg" alt="Profile image"
-            class="size-32 rounded-full object-cover absolute z-10 bottom-0 left-4 translate-y-1/2" />
+            class="absolute bottom-0 left-4 z-10 size-32 translate-y-1/2 rounded-full object-cover" />
         </div>
         <!-- Profile Actions -->
-        <div class="flex flex-row items-center gap-4 px-6 justify-end my-3">
-          <button class="btn-primary"><i data-lucide="plus"></i> Follow</button>
-          <button class="btn-icon"><i data-lucide="send" class="icon" stroke-width="1.5"></i> </button>
-          <button class="btn-icon"><i data-lucide="ellipsis" class="icon" stroke-width="1.5"></i> </button>
+        <div class="my-3 flex flex-row items-center justify-end gap-4 px-6">
+          <button class="btn-primary">
+            <i data-lucide="plus"></i> Follow
+          </button>
+          <button class="btn-icon">
+            <i data-lucide="send" class="icon" stroke-width="1.5"></i>
+          </button>
+          <button class="btn-icon">
+            <i data-lucide="ellipsis" class="icon" stroke-width="1.5"></i>
+          </button>
         </div>
         <!-- User Info -->
         <div class="flex flex-col gap-0.5 p-6">
           <div class="flex flex-row items-center gap-1">
             <h2 class="text-xl font-semibold">Helene Syre</h2>
-            <i data-lucide="badge-check" class="w-6 h-6 text-purple font-light" stroke-width="1.5"></i>
+            <i data-lucide="badge-check" class="text-purple h-6 w-6 font-light" stroke-width="1.5"></i>
           </div>
           <p class="text-muted">@helenesyre · Joined March 2026</p>
         </div>
         <!-- Bio -->
-        <div class="px-6 max-w-xl flex flex-col gap-3">
-          <p class="text-white/80">Bibendum et nec ante dolor. Ac mattis consectetur enim eu amet aliquam adipiscing.
-            Duis
-            tristique faucibus
-            imperdiet tincidunt vehicula.</p>
+        <div class="flex max-w-xl flex-col gap-3 px-6">
+          <p class="text-white/80">
+            Bibendum et nec ante dolor. Ac mattis consectetur enim eu amet
+            aliquam adipiscing. Duis tristique faucibus imperdiet tincidunt
+            vehicula.
+          </p>
           <div class="flex flex-row items-center gap-1">
             <i data-lucide="link" class="icon text-purple font-light" stroke-width="1.5"></i>
             <p class="text-purple">helenesyre.no</p>
@@ -69,21 +80,21 @@
         </div>
       </div>
       <!-- Stats -->
-      <div class="flex flex-row items-center justify-center gap-6 md:gap-10 px-6 py-8 my-6 border-y border-border">
+      <div class="border-border my-6 flex flex-row items-center justify-center gap-6 border-y px-6 py-8 md:gap-10">
         <div>
-          <p class="text-white font-bold text-2xl md:text-3xl">318</p>
+          <p class="text-2xl font-bold text-white md:text-3xl">318</p>
           <p class="text-muted text-sm md:text-base">Posts</p>
         </div>
         <div>
-          <p class="text-white font-bold text-2xl md:text-3xl">1.2K</p>
+          <p class="text-2xl font-bold text-white md:text-3xl">1.2K</p>
           <p class="text-muted text-sm md:text-base">Followers</p>
         </div>
         <div>
-          <p class="text-white font-bold text-2xl md:text-3xl">481</p>
+          <p class="text-2xl font-bold text-white md:text-3xl">481</p>
           <p class="text-muted text-sm md:text-base">Following</p>
         </div>
         <div>
-          <p class="text-white font-bold text-2xl md:text-3xl">72.4k</p>
+          <p class="text-2xl font-bold text-white md:text-3xl">72.4k</p>
           <p class="text-muted text-sm md:text-base">Likes</p>
         </div>
       </div>
@@ -91,30 +102,38 @@
       <div class="px-6">
         <nav class="flex flex-row items-center justify-center gap-4 md:gap-10">
           <div class="relative">
-            <button class="px-4 md:px-8 mb-3 text-white text-sm md:text-base font-semibold">Posts</button>
-            <div class="absolute left-0 right-0 h-1 bg-purple rounded-full"></div>
+            <button class="mb-3 px-4 text-sm font-semibold text-white md:px-8 md:text-base">
+              Posts
+            </button>
+            <div class="bg-purple absolute right-0 left-0 h-1 rounded-full"></div>
           </div>
           <div class="relative">
-            <button class="px-4 md:px-8 mb-3 text-muted text-sm md:text-base font-semibold">Reposts</button>
-            <div class="absolute left-0 right-0 h-1 bg-border rounded-full"></div>
+            <button class="text-muted mb-3 px-4 text-sm font-semibold md:px-8 md:text-base">
+              Reposts
+            </button>
+            <div class="bg-border absolute right-0 left-0 h-1 rounded-full"></div>
           </div>
           <div class="relative">
-            <button class="px-4 md:px-8 mb-3 text-muted text-sm md:text-base font-semibold">Highlights</button>
-            <div class="absolute left-0 right-0 h-1 bg-border rounded-full"></div>
+            <button class="text-muted mb-3 px-4 text-sm font-semibold md:px-8 md:text-base">
+              Highlights
+            </button>
+            <div class="bg-border absolute right-0 left-0 h-1 rounded-full"></div>
           </div>
           <div class="relative">
-            <button class="px-4 md:px-8 mb-3 text-muted text-sm md:text-base font-semibold">Tagged</button>
-            <div class="absolute left-0 right-0 h-1 bg-border rounded-full"></div>
+            <button class="text-muted mb-3 px-4 text-sm font-semibold md:px-8 md:text-base">
+              Tagged
+            </button>
+            <div class="bg-border absolute right-0 left-0 h-1 rounded-full"></div>
           </div>
         </nav>
       </div>
       <div>
-        <p class="text-muted text-center py-10">No posts yet...</p>
+        <p class="text-muted py-10 text-center">No posts yet...</p>
       </div>
     </section>
   </main>
   <footer
-    class="bg-nav text-muted border-border flex flex-col md:flex-row items-center justify-between border-t p-4 px-32 mt-10 gap-2 md:gap-0 text-base">
+    class="bg-nav text-muted border-border mt-10 flex flex-col items-center justify-between gap-2 border-t p-4 px-32 text-base md:flex-row md:gap-0">
     <p>&copy; 2026 Thread Inc.</p>
     <ul class="flex justify-center space-x-4">
       <li><a href="#" class="hover:underline">Privacy</a></li>
