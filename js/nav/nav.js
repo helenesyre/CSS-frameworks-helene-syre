@@ -15,7 +15,7 @@ const publicNav = `
 
 const privateNav = `
   <nav class="mx-auto flex items-center justify-between">
-    <a href="/feed/index.html">${logo}</a>
+    <a href="../feed/index.html">${logo}</a>
     <form class="relative" onsubmit="event.preventDefault(); event.target.search.value = '';">
       <i data-lucide="search" class="icon absolute left-3 top-1/2 -translate-y-1/2 text-muted" stroke-width="1.5"></i>
       <input
@@ -34,7 +34,7 @@ const privateNav = `
         </button>
       </li>
       <li>
-        <a href="/profile/index.html"><img src="../assets/images/profile.jpg" alt="Profile image"
+        <a href="../profile/index.html"><img src="../assets/images/profile.jpg" alt="Profile image"
           class="border-purple size-10 rounded-full border object-cover"/></a>
       </li>
     </ul>
