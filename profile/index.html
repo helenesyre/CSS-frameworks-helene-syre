@@ -5,30 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
-  <header class="bg-nav border-border mb-10 border-b p-4 px-8 text-white md:px-32">
-    <nav class="mx-auto flex items-center justify-between text-base">
-      <p>Logo</p>
-      <ul class="flex items-center space-x-4">
-        <li>
-          <button class="btn-icon">
-            <i data-lucide="bell-ring" class="icon" stroke-width="1.5"></i>
-          </button>
-        </li>
-        <li>
-          <a href="/profile.html"><img src="./assets/images/profile.jpg" alt="Profile image"
-              class="border-purple size-10 rounded-full border object-cover" /></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <header id="nav-container" class="bg-nav border-border mb-10 border-b p-4 px-8 text-white md:px-32"></header>
   <main class="mx-8 text-white md:mx-auto md:w-3xl">
     <h1 class="sr-only">Profile page</h1>
     <section class="border-border rounded-card overflow-hidden border">
@@ -36,8 +19,8 @@
       <div>
         <!-- Banner and Profile Image -->
         <div class="relative">
-          <img src="./assets/images/gradient-banner.jpg" alt="Profile image" class="h-52 w-full object-cover" />
-          <img src="./assets/images/profile.jpg" alt="Profile image"
+          <img src="../assets/images/gradient-banner.jpg" alt="Profile image" class="h-52 w-full object-cover" />
+          <img src="../assets/images/profile.jpg" alt="Profile image"
             class="absolute bottom-0 left-4 z-10 size-32 translate-y-1/2 rounded-full object-cover" />
         </div>
         <!-- Profile Actions -->
@@ -142,9 +125,8 @@
       <li><a href="#" class="hover:underline">Support</a></li>
     </ul>
   </footer>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script type="module" src="/js/nav/nav.js"></script>
+  <script type="module" src="../main.js"></script>
 </body>
 
 </html>
