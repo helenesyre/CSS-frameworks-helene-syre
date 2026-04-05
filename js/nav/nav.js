@@ -14,8 +14,19 @@ const publicNav = `
 `;
 
 const privateNav = `
-  <nav class="mx-auto flex items-center justify-between text-base">
-    ${logo}
+  <nav class="mx-auto flex items-center justify-between">
+    <a href="/feed/index.html">${logo}</a>
+    <form class="relative" onsubmit="event.preventDefault(); event.target.search.value = '';">
+      <i data-lucide="search" class="icon absolute left-3 top-1/2 -translate-y-1/2 text-muted" stroke-width="1.5"></i>
+      <input
+        type="text"
+        placeholder="Search threads..."
+        id="search-input"
+        name="search"
+        aria-label="Search threads"
+        class="w-64 rounded-default bg-surface border border-border px-4 py-2.5 pl-10 text-sm text-white placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple"
+      />
+    </form>
     <ul class="flex items-center space-x-4">
       <li>
         <button class="btn-icon">
@@ -24,7 +35,7 @@ const privateNav = `
       </li>
       <li>
         <a href="/profile/index.html"><img src="../assets/images/profile.jpg" alt="Profile image"
-          class="border-purple size-10 rounded-full border object-cover" /></a>
+          class="border-purple size-10 rounded-full border object-cover"/></a>
       </li>
     </ul>
   </nav>
@@ -43,6 +54,6 @@ export function renderNav() {
   if (window.lucide) {
     window.lucide.createIcons();
   }
-};
+}
 
 renderNav();
