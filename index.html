@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
@@ -86,8 +88,10 @@
       <li><a href="#" class="hover:underline">Support</a></li>
     </ul>
   </footer>
-  <script type="module" src="/js/nav/nav.js"></script>
-  <script type="module" src="/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="js/nav/nav.js"></script>
 </body>
 
 </html>

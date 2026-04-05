@@ -40,6 +40,9 @@ export function renderNav() {
   } else {
     navContainer.innerHTML = publicNav;
   }
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
 };
 
 renderNav();
