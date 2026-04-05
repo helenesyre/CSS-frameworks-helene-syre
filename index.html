@@ -8,23 +8,10 @@
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
-  <header class="bg-nav border-border border-b p-4 px-8 text-white md:px-32">
-    <nav class="mx-auto flex items-center justify-between text-base">
-      <p>Logo</p>
-      <ul class="flex items-center space-x-4">
-        <li><a href="#" class="text-muted">Explore</a></li>
-        <li><a href="#" class="text-muted">About</a></li>
-        <li>
-          <button class="btn-primary">Get started</button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <header id="nav-container" class="bg-nav border-border border-b p-4 px-8 text-white md:px-32"></header>
   <main class="grid grid-cols-1 text-white lg:grid-cols-2">
     <section class="hidden flex-col items-start justify-center gap-5 p-32 lg:flex xl:gap-10">
       <h1 class="max-w-xl text-5xl font-bold xl:text-7xl xl:leading-24">
@@ -47,7 +34,7 @@
           <button class="btn-primary w-full">Sign in</button>
           <button class="btn-secondary w-full">Register</button>
         </nav>
-        <form class="mt-6 flex flex-col gap-4" action="profile.html" method="GET">
+        <form class="mt-6 flex flex-col gap-4" action="profile/index.html" method="GET">
           <div class="flex flex-col gap-4">
             <div class="flex flex-col gap-1">
               <label for="email" class="text-muted text-sm uppercase">Email</label>
@@ -99,9 +86,8 @@
       <li><a href="#" class="hover:underline">Support</a></li>
     </ul>
   </footer>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script type="module" src="/js/nav/nav.js"></script>
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>
