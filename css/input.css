@@ -10,6 +10,7 @@
 
   /* Purple */
   --color-purple: #7c5cfc;
+  --color-purple-medium: #242039;
   --color-purple-light: #a78bfa;
 
   /* Backgrounds */
@@ -44,7 +45,11 @@
 }
 
 .btn-secondary {
-  @apply text-muted rounded-default cursor-pointer px-6 py-2 font-bold;
+  @apply text-muted rounded-default hover:bg-surface cursor-pointer px-4 py-2 font-bold;
+}
+
+.btn-secondary-outline {
+  @apply rounded-default border-border hover:bg-purple-medium text-muted cursor-pointer border px-4 py-2 font-bold hover:text-white;
 }
 
 .btn-icon {
@@ -61,4 +66,8 @@
 
 .tag {
   @apply rounded-default bg-surface text-purple-light px-4 py-1 text-sm font-medium;
+}
+
+.tag-card {
+  @apply rounded-default bg-purple-medium text-purple-light px-4 py-1 text-sm font-medium;
 }

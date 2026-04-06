@@ -15,7 +15,146 @@
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
   <header id="nav-container" class="bg-nav border-border mb-10 border-b p-4 px-8 text-white md:px-32"></header>
   <main class="mx-8 text-white md:mx-auto md:w-3xl">
-    <h1 class="">Feed</h1>
+    <h1 class="sr-only">Feed page</h1>
+    <!-- Post input card -->
+    <section class="border-border rounded-card bg-surface overflow-hidden border p-6">
+      <!-- Post input -->
+      <div class="flex flex-row items-center gap-4 text-start">
+        <img src="../assets/images/profile.jpg" alt="Profile image"
+          class="border-purple aspect-square size-10 rounded-full border object-cover" />
+        <button class="text-muted bg-surface-light rounded-default border-border w-full border px-4 py-3 text-start">
+          What's on your mind today?
+        </button>
+      </div>
+      <!-- Card actions -->
+      <div class="mt-5 flex flex-row items-center justify-between">
+        <div class="text-muted flex flex-row items-center gap-3 text-sm">
+          <i data-lucide="image" class="h-6 w-6" stroke-width="1.75"></i>
+          <i data-lucide="chart-column" class="h-6 w-6" stroke-width="1.75"></i>
+          <i data-lucide="at-sign" class="h-6 w-6" stroke-width="1.75"></i>
+        </div>
+        <button class="btn-primary">Post</button>
+      </div>
+    </section>
+    <!-- Posts feed -->
+    <section class="mt-7">
+      <div class="flex flex-row items-center">
+        <div class="flex flex-row gap-2 text-sm">
+          <button class="btn-primary">Feed</button>
+          <button class="btn-secondary">Following</button>
+          <button class="btn-secondary">Explore</button>
+        </div>
+        <select class="ml-auto">
+          <option>Latest</option>
+        </select>
+      </div>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/profile.jpg" alt="Helene Syre profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <div class="flex flex-row items-center gap-2">
+                <h2 class="text-base font-bold">Helene Syre</h2>
+                <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+              </div>
+              <p class="text-muted text-sm">@helenesyre · Apr 06, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Edit
+            </button>
+          </div>
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">A new beginning!</h2>
+              <p class="text-muted text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#new</span>
+              <span class="tag-card">#adventure</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t p-6 pt-4 text-sm">
+          <button class="flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            750
+          </button>
+          <button class="flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            132
+          </button>
+          <button class="flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/posts/profile-bond.jpg" alt="James Bond profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <h2 class="text-base font-bold">James Bond</h2>
+              <p class="text-muted text-sm">@jamesbond · Apr 06, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Follow
+            </button>
+          </div>
+          <!-- Post image -->
+          <img src="../assets/images/posts/image-bond.jpg" alt="James Bond post image"
+            class="rounded-default mt-4 max-h-72 w-full object-cover" />
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">Mission Accomplished</h2>
+              <p class="text-muted text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#photography</span>
+              <span class="tag-card">#travel</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t p-6 pt-4 text-sm">
+          <button class="flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            1.5K
+          </button>
+          <button class="flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            300
+          </button>
+          <button class="flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+    </section>
   </main>
   <footer
     class="bg-nav text-muted border-border mt-10 flex flex-col items-center justify-between gap-2 border-t p-4 px-32 text-base md:flex-row md:gap-0">
