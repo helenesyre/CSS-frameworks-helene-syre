@@ -1,7 +1,7 @@
 import { logo } from "./logo.js";
 
 const publicNav = `
-  <nav class="mx-auto flex items-center justify-between text-base">
+  <nav aria-label="Header navigation" class="mx-auto flex items-center justify-between text-base">
     ${logo}
     <ul class="flex items-center space-x-4">
       <li><a href="#" class="text-muted">Explore</a></li>
@@ -14,9 +14,9 @@ const publicNav = `
 `;
 
 const privateNav = `
-  <nav class="mx-auto flex items-center justify-between">
+  <nav aria-label="Header navigation" class="mx-auto flex items-center justify-between">
     <a href="../feed/index.html">${logo}</a>
-    <form class="relative" onsubmit="event.preventDefault(); event.target.search.value = '';">
+    <form class="relative hidden sm:block" onsubmit="event.preventDefault(); event.target.search.value = '';">
       <i data-lucide="search" class="icon absolute left-3 top-1/2 -translate-y-1/2 text-muted" stroke-width="1.5"></i>
       <input
         type="text"

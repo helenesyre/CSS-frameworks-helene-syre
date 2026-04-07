@@ -7,9 +7,9 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../css/style.css" />
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
   <link rel="manifest" href="../assets/favicon/site.webmanifest" />
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
@@ -21,24 +21,35 @@
   <header id="nav-container" class="bg-nav border-border mb-10 border-b p-4 px-8 text-white md:px-32"></header>
   <main class="mx-8 text-white md:mx-auto md:w-3xl">
     <h1 class="sr-only">Feed page</h1>
-    <!-- Post input card -->
+    <!-- Search form -->
+    <form class="relative mb-7 block sm:hidden" onsubmit="
+          event.preventDefault();
+          event.target.search.value = '';
+        ">
+      <i data-lucide="search" class="icon text-muted absolute top-1/2 left-3 -translate-y-1/2" stroke-width="1.5"></i>
+      <input type="text" placeholder="Search threads..." id="search-input" name="search" aria-label="Search threads"
+        class="rounded-default bg-surface border-border placeholder-muted focus:ring-purple w-full border px-4 py-2.5 pl-10 text-sm text-white focus:ring-2 focus:outline-none" />
+    </form>
+    <!-- Create post card -->
     <section class="border-border rounded-card bg-surface overflow-hidden border p-6">
       <!-- Post input -->
       <div class="flex flex-row items-center gap-4 text-start">
         <img src="../assets/images/profile.jpg" alt="Profile image"
           class="border-purple aspect-square size-10 rounded-full border object-cover" />
-        <button class="text-muted bg-surface-light rounded-default border-border w-full border px-4 py-3 text-start">
+        <button
+          class="text-muted bg-surface-light rounded-default border-border w-full cursor-pointer border px-4 py-3 text-start hover:brightness-115"
+          id="onMindOpenBtn">
           What's on your mind today?
         </button>
       </div>
       <!-- Card actions -->
       <div class="mt-5 flex flex-row items-center justify-between">
         <div class="text-muted flex flex-row items-center gap-3 text-sm">
-          <i data-lucide="image" class="h-6 w-6" stroke-width="1.75"></i>
-          <i data-lucide="chart-column" class="h-6 w-6" stroke-width="1.75"></i>
-          <i data-lucide="at-sign" class="h-6 w-6" stroke-width="1.75"></i>
+          <i data-lucide="image" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+          <i data-lucide="chart-column" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+          <i data-lucide="at-sign" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
         </div>
-        <button class="btn-primary">Post</button>
+        <button class="btn-primary" id="openBtn">Post</button>
       </div>
     </section>
     <!-- Posts feed -->
@@ -49,9 +60,11 @@
           <button class="btn-secondary">Following</button>
           <button class="btn-secondary">Explore</button>
         </div>
+        <!-- Sort dropdown -->
+        <!-- Code source inspiration: https://stackoverflow.com/questions/62056034/tailwind-css-navigation-hover-dropdown-with-padding - Author: Alban Kaperi - Collected: Apr 7 -->
         <div class="group relative ml-auto w-32 text-sm md:w-56">
           <button
-            class="bg-surface border-border rounded-default flex w-full flex-row items-center justify-between border px-4 py-2 font-semibold">
+            class="bg-surface border-border rounded-default flex w-full cursor-pointer flex-row items-center justify-between border px-4 py-2 font-semibold">
             Latest
             <i data-lucide="chevron-down" class="h-6 w-6 transition-transform duration-300 group-hover:rotate-x-180"
               stroke-width="1.5"></i>
@@ -177,6 +190,37 @@
         </div>
       </article>
     </section>
+    <div id="modal" class="hidden">
+      <div id="createModal" class="fixed inset-0 z-100 flex items-center justify-center bg-black/50">
+        <!-- Modal content -->
+        <div class="bg-surface rounded-card relative mx-6 w-full max-w-md p-6 text-white">
+          <button id="closeBtn" class="hover:text-purple absolute top-4 right-4 cursor-pointer">
+            <i data-lucide="x" class="h-6 w-6" stroke-width="1.75"></i>
+          </button>
+          <h2 class="mb-4 text-xl font-bold">Create a post</h2>
+          <form id="create-post-form" class="flex flex-col gap-4" onsubmit="event.preventDefault()">
+            <div class="flex flex-col">
+              <label for="post-content" class="sr-only">Content</label>
+              <textarea name="content" id="post-content" aria-label="Post Content"
+                class="bg-surface-light rounded-default border-border placeholder-muted focus:ring-purple h-32 max-h-60 border p-3 text-sm text-white focus:ring-2 focus:outline-none"
+                placeholder="What's on your mind today?"></textarea>
+              <!-- Card actions -->
+              <div
+                class="text-muted border-border rounded-default mt-5 flex flex-row items-center gap-3 border p-3 text-sm">
+                <p class="mr-auto">Add to post:</p>
+                <i data-lucide="image" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+                <i data-lucide="chart-column" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+                <i data-lucide="at-sign" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+                <i data-lucide="laugh" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+                <i data-lucide="palette" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+                <i data-lucide="ellipsis" class="hover:text-purple h-6 w-6 cursor-pointer" stroke-width="1.75"></i>
+              </div>
+              <button id="postBtn" class="btn-primary mt-5">Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
   <footer
     class="bg-nav text-muted border-border mt-10 flex flex-col items-center justify-between gap-2 border-t p-4 px-32 text-base md:flex-row md:gap-0">
@@ -191,6 +235,7 @@
     lucide.createIcons();
   </script>
   <script type="module" src="../js/nav/nav.js"></script>
+  <script src="../js/modal/createModal.js"></script>
 </body>
 
 </html>
