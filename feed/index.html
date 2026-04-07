@@ -18,7 +18,8 @@
 </head>
 
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
-  <header id="nav-container" class="bg-nav border-border mb-10 border-b p-4 px-8 text-white md:px-32"></header>
+  <header id="nav-container"
+    class="bg-nav border-border sticky top-0 z-200 mb-10 border-b p-4 px-8 text-white md:px-32"></header>
   <main class="mx-8 text-white md:mx-auto md:w-3xl">
     <h1 class="sr-only">Feed page</h1>
     <!-- Search form -->
@@ -106,8 +107,8 @@
             <div class="mt-4 flex flex-col gap-2">
               <h2 class="text-2xl font-semibold">A new beginning!</h2>
               <p class="text-muted text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Just moved to a new city and honestly? Best decision I've ever
+                made. The energy here is something else entirely.
               </p>
             </div>
             <div class="flex flex-row items-center gap-3">
@@ -117,20 +118,20 @@
           </div>
         </div>
         <!-- Post actions -->
-        <div class="border-border text-muted flex flex-row items-center gap-4 border-t p-6 pt-4 text-sm">
-          <button class="flex items-center gap-2">
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
             <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
             750
           </button>
-          <button class="flex items-center gap-2">
+          <button class="hover:text-purple flex items-center gap-2">
             <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
             132
           </button>
-          <button class="flex items-center gap-2">
+          <button class="hover:text-purple flex items-center gap-2">
             <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
             Repost
           </button>
-          <button class="ml-auto flex items-center gap-2">
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
             <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
             Share
           </button>
@@ -159,8 +160,8 @@
             <div class="mt-4 flex flex-col gap-2">
               <h2 class="text-2xl font-semibold">Mission Accomplished</h2>
               <p class="text-muted text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Three countries in five days. Somehow still standing. The view
+                from the last stop made every layover worth it.
               </p>
             </div>
             <div class="flex flex-row items-center gap-3">
@@ -170,20 +171,294 @@
           </div>
         </div>
         <!-- Post actions -->
-        <div class="border-border text-muted flex flex-row items-center gap-4 border-t p-6 pt-4 text-sm">
-          <button class="flex items-center gap-2">
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
             <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
             1.5K
           </button>
-          <button class="flex items-center gap-2">
+          <button class="hover:text-purple flex items-center gap-2">
             <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
             300
           </button>
-          <button class="flex items-center gap-2">
+          <button class="hover:text-purple flex items-center gap-2">
             <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
             Repost
           </button>
-          <button class="ml-auto flex items-center gap-2">
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/posts/profile-maya.jpg" alt="Maya Thornton profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <h2 class="text-base font-bold">Maya Thornton</h2>
+              <p class="text-muted text-sm">@mayathornton · Apr 05, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Follow
+            </button>
+          </div>
+          <!-- Post image -->
+          <img src="../assets/images/posts/image-maya.jpg" alt="Maya Thornton post image"
+            class="rounded-default mt-4 max-h-72 w-full object-cover" />
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">
+                The garden is finally alive
+              </h2>
+              <p class="text-muted text-sm">
+                Six months of work and the first flowers just bloomed this
+                morning. There's something deeply satisfying about growing
+                something from nothing.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#gardening</span>
+              <span class="tag-card">#slowliving</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            58
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            4
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/posts/profile-elias.jpg" alt="Elias Vang profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <h2 class="text-base font-bold">Elias Vang</h2>
+              <p class="text-muted text-sm">@eliasvang · Apr 04, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Follow
+            </button>
+          </div>
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">
+                Shipped my first solo project
+              </h2>
+              <p class="text-muted text-sm">
+                Built and launched an app completely on my own this weekend.
+                It's small, it's rough around the edges, but it's mine.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#buildinpublic</span>
+              <span class="tag-card">#dev</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            120
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            25
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/posts/profile-sofia.jpg" alt="Sofia Reyes profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <div class="flex flex-row items-center gap-2">
+                <h2 class="text-base font-bold">Sofia Reyes</h2>
+                <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+              </div>
+              <p class="text-muted text-sm">@sofiareyes · Apr 04, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Follow
+            </button>
+          </div>
+          <!-- Post image -->
+          <img src="../assets/images/posts/image-sofia.jpg" alt="Sofia Reyes post image"
+            class="rounded-default mt-4 max-h-72 w-full object-cover" />
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">
+                Morning light hits different in spring
+              </h2>
+              <p class="text-muted text-sm">
+                Woke up at 6am for no reason and ended up catching the most
+                incredible golden hour. Sometimes the early hours reward you.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#photography</span>
+              <span class="tag-card">#mornig</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            3.2K
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            453
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/posts/profile-noah.jpg" alt="Noah Blackwell profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <h2 class="text-base font-bold">Noah Blackwell</h2>
+              <p class="text-muted text-sm">@noahblackwell · Apr 04, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Follow
+            </button>
+          </div>
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">Two years caffeine-free</h2>
+              <p class="text-muted text-sm">
+                Everyone said I'd cave within a week. Honestly the first month
+                was brutal, but I haven't looked back since. Sleep alone made
+                it worth it.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#health</span>
+              <span class="tag-card">#wellness</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            48
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            20
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
+            <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+            Share
+          </button>
+        </div>
+      </article>
+      <!-- Post card -->
+      <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
+        <div class="p-6">
+          <!-- User -->
+          <div class="flex flex-row items-center gap-4 text-start">
+            <img src="../assets/images/posts/profile-ingrid.jpg" alt="Ingrid Solberg profile image"
+              class="border-purple aspect-square size-10 rounded-full border object-cover" />
+            <div>
+              <h2 class="text-base font-bold">
+                Ingrid Solberg @ingridsolberg
+              </h2>
+              <p class="text-muted text-sm">@ingridsolberg · Apr 06, 2026</p>
+            </div>
+            <button class="btn-secondary-outline ml-auto text-sm">
+              Follow
+            </button>
+          </div>
+          <!-- Post image -->
+          <img src="../assets/images/posts/image-ingrid.jpg" alt="Ingrid Solberg post image"
+            class="rounded-default mt-4 max-h-72 w-full object-cover" />
+          <!-- Post content -->
+          <div class="flex flex-col gap-4">
+            <div class="mt-4 flex flex-col gap-2">
+              <h2 class="text-2xl font-semibold">
+                Just got back from the fjords
+              </h2>
+              <p class="text-muted text-sm">
+                No photo does it justice. You just have to stand there in the
+                silence and let it hit you. Already planning the next trip.
+              </p>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag-card">#norway</span>
+              <span class="tag-card">#nature</span>
+            </div>
+          </div>
+        </div>
+        <!-- Post actions -->
+        <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+            500
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+            80
+          </button>
+          <button class="hover:text-purple flex items-center gap-2">
+            <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+            Repost
+          </button>
+          <button class="hover:text-purple ml-auto flex items-center gap-2">
             <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
             Share
           </button>
