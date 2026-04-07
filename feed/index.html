@@ -44,9 +44,26 @@
           <button class="btn-secondary">Following</button>
           <button class="btn-secondary">Explore</button>
         </div>
-        <select class="ml-auto">
-          <option>Latest</option>
-        </select>
+        <div class="group relative ml-auto w-32 text-sm md:w-56">
+          <button
+            class="bg-surface border-border rounded-default flex w-full flex-row items-center justify-between border px-4 py-2 font-semibold">
+            Latest
+            <i data-lucide="chevron-down" class="h-6 w-6 transition-transform duration-300 group-hover:rotate-x-180"
+              stroke-width="1.5"></i>
+          </button>
+          <ul
+            class="bg-surface rounded-default border-border absolute right-0 mt-2 hidden w-full border p-2 group-hover:block">
+            <li
+              class="bg-surface-light rounded-icon text-purple-light flex flex-row items-center justify-between px-3 py-1.5 font-semibold">
+              Latest
+              <i data-lucide="check" class="icon" stroke-width="1.75"></i>
+            </li>
+            <li class="mt-1 px-3 py-1.5">Top</li>
+            <li class="px-3 py-1.5">Relevant</li>
+            <li class="px-3 py-1.5">Following</li>
+            <li class="px-3 py-1.5">Trending</li>
+          </ul>
+        </div>
       </div>
       <!-- Post card -->
       <article class="border-border rounded-card bg-surface mt-5 overflow-hidden border">
