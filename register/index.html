@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Join Thread to share your thoughts and connect with people who matter. Sign up or log in to start the conversation." />
-  <title>Thread | Profile</title>
+  <title>Thread | Register</title>
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
@@ -35,16 +35,18 @@
 
     <section class="bg-surface border-border border-l px-8 md:px-20 lg:px-16">
       <div class="my-auto flex h-full flex-col justify-center lg:mx-auto lg:max-w-sm">
-        <div class="flex flex-col gap-2">
-          <h2 class="text-3xl font-semibold xl:text-4xl">Welcome back!</h2>
-          <p class="text-muted text-md xl:text-lg">Sign in to your account</p>
-        </div>
+        <h2 class="text-3xl font-semibold xl:text-4xl">Create an account</h2>
         <nav class="rounded-card bg-bg mt-6 flex gap-2 p-1 text-sm">
-          <button class="btn-primary w-full">Sign in</button>
-          <a href="register/index.html" class="btn-secondary w-full text-center">Register</a>
+          <a href="../index.html" class="btn-secondary w-full text-center">Sign in</a>
+          <button class="btn-primary w-full">Register</button>
         </nav>
-        <form class="mt-6 flex flex-col gap-4" action="profile/index.html" method="GET">
+        <form class="mt-6 flex flex-col gap-4" action="../index.html" method="GET">
           <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="name" class="text-muted text-sm uppercase">Name</label>
+              <input type="text" id="name" placeholder="Ola Nordmann" required
+                class="rounded-default bg-bg border-border placeholder-muted focus:ring-purple border p-3 text-sm focus:ring-2 focus:outline-none" />
+            </div>
             <div class="flex flex-col gap-1">
               <label for="email" class="text-muted text-sm uppercase">Email</label>
               <input type="email" id="email" placeholder="your-email@example.com" required
@@ -56,13 +58,17 @@
                 class="rounded-default bg-bg border-border placeholder-muted focus:ring-purple border p-3 text-sm focus:ring-2 focus:outline-none" />
             </div>
           </div>
-          <p class="link-underline ml-auto text-sm">Forgot Password?</p>
+          <div>
+            <input type="checkbox" id="terms" class="mr-2" required />
+            <label for="terms" class="text-muted text-sm">I agree to the <span class="link-underline">Terms</span> and
+              <span class="link-underline">Privacy Policy</span></label>
+          </div>
           <button class="btn-primary mt-4">
-            Sign in<i data-lucide="arrow-right" class="h-6 w-6" stroke-width="1.75"></i>
+            Register<i data-lucide="arrow-right" class="h-6 w-6" stroke-width="1.75"></i>
           </button>
           <div class="my-4 flex items-center text-sm">
             <div class="bg-border h-px flex-1"></div>
-            <span class="text-muted mx-4">or continue with</span>
+            <span class="text-muted mx-4">or register with</span>
             <div class="bg-border h-px flex-1"></div>
           </div>
           <div class="mb-4 flex flex-row gap-4 text-sm">
@@ -77,11 +83,6 @@
               Facebook
             </button>
           </div>
-          <p class="text-muted text-center text-sm">
-            By signing in you agree to our
-            <span class="link-underline">Terms</span> and
-            <span class="link-underline">Privacy Policy</span>
-          </p>
         </form>
       </div>
     </section>
@@ -98,7 +99,7 @@
   <script>
     lucide.createIcons();
   </script>
-  <script type="module" src="js/nav/nav.js"></script>
+  <script type="module" src="../js/nav/nav.js"></script>
 </body>
 
 </html>

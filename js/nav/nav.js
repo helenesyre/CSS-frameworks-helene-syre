@@ -24,7 +24,7 @@ const privateNav = `
         id="search-input"
         name="search"
         aria-label="Search threads"
-        class="w-64 rounded-default bg-surface border border-border px-4 py-2.5 pl-10 text-sm text-white placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple"
+        class="w-56 md:w-64 rounded-default bg-surface border border-border px-4 py-2.5 pl-10 text-sm text-white placeholder-muted focus:outline-none focus:ring-2 focus:ring-purple"
       />
     </form>
     <ul class="flex items-center space-x-4">
@@ -32,6 +32,13 @@ const privateNav = `
         <button class="btn-icon">
           <i data-lucide="bell-ring" class="icon" stroke-width="1.5"></i>
         </button>
+      </li>
+      <li>
+        <a href="../../index.html">
+          <button class="btn-icon">
+            <i data-lucide="log-out" class="icon" stroke-width="1.5"></i>
+          </button>
+        </a>
       </li>
       <li>
         <a href="../profile/index.html"><img src="../assets/images/profile/profile.jpg" alt="Profile image"
