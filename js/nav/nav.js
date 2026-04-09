@@ -34,7 +34,7 @@ const privateNav = `
         </button>
       </li>
       <li>
-        <a href="../../index.html">
+        <a href="../index.html">
           <button class="btn-icon">
             <i data-lucide="log-out" class="icon" stroke-width="1.5"></i>
           </button>
