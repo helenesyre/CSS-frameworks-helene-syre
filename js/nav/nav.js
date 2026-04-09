@@ -34,7 +34,7 @@ const privateNav = `
         </button>
       </li>
       <li>
-        <a href="../profile/index.html"><img src="../assets/images/profile.jpg" alt="Profile image"
+        <a href="../profile/index.html"><img src="../assets/images/profile/profile.jpg" alt="Profile image"
           class="border-purple size-10 rounded-full border object-cover"/></a>
       </li>
     </ul>
