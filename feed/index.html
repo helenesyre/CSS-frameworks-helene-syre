@@ -25,7 +25,7 @@
     <h1 class="sr-only">Feed page</h1>
     <!-- Navigation sidebar-->
     <nav aria-label="Sidebar navigation"
-      class="bg-surface border-border text-muted fixed right-0 bottom-0 left-0 flex items-center border-t text-sm md:border-0 lg:relative lg:flex-col lg:items-start lg:bg-transparent">
+      class="bg-surface border-border text-muted fixed right-0 bottom-0 left-0 z-100 flex items-center border-t text-sm md:border-0 lg:relative lg:flex-col lg:items-start lg:bg-transparent">
       <h2 class="text-muted mb-3 hidden text-base uppercase lg:block">
         Menu
       </h2>
@@ -142,7 +142,7 @@
                   <img src="../assets/images/profile.jpg" alt="Helene Syre profile image"
                     class="border-purple aspect-square size-10 rounded-full border object-cover" />
                   <div>
-                    <div class="flex flex-row items-center gap-2">
+                    <div class="flex flex-row items-center gap-1">
                       <h2 class="text-base font-bold">Helene Syre</h2>
                       <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
                     </div>
@@ -376,7 +376,7 @@
                   <img src="../assets/images/posts/profile-sofia.jpg" alt="Sofia Reyes profile image"
                     class="border-purple aspect-square size-10 rounded-full border object-cover" />
                   <div>
-                    <div class="flex flex-row items-center gap-2">
+                    <div class="flex flex-row items-center gap-1">
                       <h2 class="text-base font-bold">Sofia Reyes</h2>
                       <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
                     </div>
@@ -582,6 +582,7 @@
         </div>
       </div>
     </section>
+    <!-- Sidebar -->
     <aside class="hidden lg:block">
       <h2 class="text-muted mb-3 hidden text-base uppercase lg:block">
         Trending
@@ -607,6 +608,45 @@
           <p class="text-muted text-sm">5.3k posts</p>
         </li>
         <hr class="border-border border-t" />
+      </ul>
+      <h2 class="text-muted mt-5 mb-3 hidden text-base uppercase lg:block">
+        You may know
+      </h2>
+      <ul class="flex w-full flex-col gap-4">
+        <li class="flex flex-row items-center gap-3">
+          <span class="bg-purple flex size-10 items-center justify-center rounded-full text-sm font-bold text-white">
+            NO
+          </span>
+          <div>
+            <div class="flex flex-row items-center gap-1">
+              <h3 class="truncate text-base font-semibold">Nina Olsen</h3>
+              <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+            </div>
+            <p class="text-muted text-sm">@olsennina</p>
+          </div>
+        </li>
+        <li class="flex flex-row items-center gap-3">
+          <span class="bg-purple flex size-10 items-center justify-center rounded-full text-sm font-bold text-white">
+            ON
+          </span>
+          <div>
+            <h3 class="truncate text-base font-semibold text-white">
+              Ola Nordmann
+            </h3>
+            <p class="text-muted text-sm">@o-nordmann</p>
+          </div>
+        </li>
+        <li class="flex flex-row items-center gap-3">
+          <span class="bg-purple flex size-10 items-center justify-center rounded-full text-sm font-bold text-white">
+            HS
+          </span>
+          <div>
+            <h3 class="truncate text-base font-semibold text-white">
+              Beate Hansen
+            </h3>
+            <p class="text-muted text-sm">@beatehansen</p>
+          </div>
+        </li>
       </ul>
     </aside>
   </main>

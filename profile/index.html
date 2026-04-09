@@ -20,9 +20,55 @@
 <body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
   <header id="nav-container"
     class="bg-nav border-border sticky top-0 z-200 mb-10 border-b p-4 px-8 text-white md:px-20 lg:px-32"></header>
-  <main class="mx-8 text-white md:mx-auto md:w-2xl">
+  <main
+    class="grid grid-rows-[auto_1fr_auto] gap-10 px-8 text-white md:mx-auto md:px-20 lg:grid-cols-[1fr_2.5fr_1fr] lg:px-32">
     <h1 class="sr-only">Profile page</h1>
-    <section class="border-border rounded-card overflow-hidden border">
+    <!-- Navigation sidebar-->
+    <nav aria-label="Sidebar navigation"
+      class="bg-surface border-border text-muted fixed right-0 bottom-0 left-0 z-100 flex items-center border-t text-sm md:border-0 lg:relative lg:flex-col lg:items-start lg:bg-transparent">
+      <h2 class="text-muted mb-3 hidden text-base uppercase lg:block">
+        Menu
+      </h2>
+      <ul class="flex w-full flex-row gap-0 text-sm lg:flex-col lg:gap-4 lg:text-base">
+        <a href="../feed/index.html"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="home" class="h-6 w-6" stroke-width="1.75"></i>
+            Feed
+          </li>
+        </a>
+        <a href="#"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="compass" class="h-6 w-6" stroke-width="1.75"></i>
+            Explore
+          </li>
+        </a>
+        <a href="#"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="bookmark" class="h-6 w-6" stroke-width="1.75"></i>
+            Bookmarks
+          </li>
+        </a>
+        <a href="#"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="settings" class="h-6 w-6" stroke-width="1.75"></i>
+            Settings
+          </li>
+        </a>
+        <a href="../profile/index.html"
+          class="bg-purple rounded-0 lg:rounded-default flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 font-bold text-white lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="user" class="h-6 w-6" stroke-width="1.75"></i>
+            Profile
+          </li>
+        </a>
+      </ul>
+    </nav>
+    <!-- Profile content -->
+    <section class="border-border rounded-card w-full overflow-hidden border lg:max-w-2xl">
       <!-- Profile Header -->
       <div>
         <!-- Banner and Profile Image -->
@@ -128,7 +174,7 @@
               <img src="../assets/images/profile.jpg" alt="Helene Syre profile image"
                 class="border-purple aspect-square size-10 rounded-full border object-cover" />
               <div>
-                <div class="flex flex-row items-center gap-2">
+                <div class="flex flex-row items-center gap-1">
                   <h2 class="text-base font-bold">Helene Syre</h2>
                   <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
                 </div>
@@ -176,6 +222,32 @@
         </article>
       </div>
     </section>
+    <!-- Sidebar -->
+    <aside class="border-border rounded-card bg-surface hidden h-fit overflow-hidden border p-6 lg:block">
+      <h2 class="sr-only">Personal Info</h2>
+      <ul class="flex w-full flex-col gap-4">
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Mail</p>
+          <p class="text-base text-white">hs@example.com</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Phone</p>
+          <p class="text-base text-white">+47 123 45 678</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Location</p>
+          <p class="text-base text-white">Oslo, Norway</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Birthday</p>
+          <p class="text-base text-white">Born January 15, 1990</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Work</p>
+          <p class="text-base text-white">Web Developer</p>
+        </li>
+      </ul>
+    </aside>
   </main>
   <footer
     class="bg-nav text-muted border-border mt-10 flex flex-col items-center justify-between gap-2 border-t p-4 px-8 text-base md:flex-row md:gap-0 md:px-20 lg:px-32">
