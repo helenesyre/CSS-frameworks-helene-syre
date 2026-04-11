@@ -1,0 +1,29 @@
+{
+  "name": "css-frameworks-helene-syre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helenesyre/CSS-frameworks-helene-syre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helenesyre/CSS-frameworks-helene-syre/issues"
+  },
+  "homepage": "https://github.com/helenesyre/CSS-frameworks-helene-syre#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.2.2"
+  }
+}

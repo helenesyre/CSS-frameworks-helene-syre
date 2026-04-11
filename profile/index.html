@@ -1,0 +1,489 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Follow Helene Syre on Thread to keep up with her latest posts, photos, and conversations." />
+  <title>Thread | Profile</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
+  <header id="nav-container"
+    class="bg-nav border-border sticky top-0 z-200 mb-10 border-b p-4 px-8 text-white md:px-20 lg:px-32"></header>
+  <main
+    class="grid grid-rows-[auto_1fr_auto] gap-x-10 px-8 text-white md:mx-auto md:px-20 lg:grid-cols-[1fr_2.5fr_1fr] lg:px-32">
+    <h1 class="sr-only">Profile page</h1>
+    <!-- Navigation sidebar-->
+    <nav aria-label="Sidebar navigation"
+      class="bg-surface border-border text-muted fixed right-0 bottom-0 left-0 z-100 flex items-center border-t text-sm md:border-0 lg:relative lg:flex-col lg:items-start lg:bg-transparent">
+      <h2 class="text-muted mb-3 hidden text-base uppercase lg:block">
+        Menu
+      </h2>
+      <ul class="flex w-full flex-row gap-0 text-sm lg:flex-col lg:gap-4 lg:text-base">
+        <a href="../feed/index.html"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="home" class="h-6 w-6" stroke-width="1.75"></i>
+            Feed
+          </li>
+        </a>
+        <a href="#"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="compass" class="h-6 w-6" stroke-width="1.75"></i>
+            Explore
+          </li>
+        </a>
+        <a href="#"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="bookmark" class="h-6 w-6" stroke-width="1.75"></i>
+            Bookmarks
+          </li>
+        </a>
+        <a href="#"
+          class="rounded-default text-muted hover:bg-purple-nav hover:text-purple-light flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="settings" class="h-6 w-6" stroke-width="1.75"></i>
+            Settings
+          </li>
+        </a>
+        <a href="../profile/index.html"
+          class="bg-purple rounded-0 lg:rounded-default flex flex-1 cursor-pointer flex-col items-center gap-1 p-3 font-bold text-white lg:flex-row lg:gap-3">
+          <li class="flex flex-col items-center gap-1 lg:flex-row lg:gap-3">
+            <i data-lucide="user" class="h-6 w-6" stroke-width="1.75"></i>
+            Profile
+          </li>
+        </a>
+      </ul>
+    </nav>
+    <!-- Profile content -->
+    <section class="w-full lg:max-w-2xl">
+      <!-- Search form -->
+      <form class="relative mb-7 block sm:hidden" onsubmit="
+            event.preventDefault();
+            event.target.search.value = '';
+          ">
+        <i data-lucide="search" class="icon text-muted absolute top-1/2 left-3 -translate-y-1/2" stroke-width="1.5"></i>
+        <input type="text" placeholder="Search threads..." id="search-input" name="search" aria-label="Search threads"
+          class="rounded-default bg-surface border-border placeholder-muted focus:ring-purple w-full border px-4 py-2.5 pl-10 text-sm text-white focus:ring-2 focus:outline-none" />
+      </form>
+      <div class="border-border rounded-card overflow-hidden border">
+        <!-- Profile Header -->
+        <header>
+          <!-- Banner and Profile Image -->
+          <div class="relative">
+            <img src="../assets/images/profile/gradient-banner.jpg" alt="Profile banner"
+              class="h-52 w-full object-cover" />
+            <img src="../assets/images/profile/profile.jpg" alt="Helene Syre profile image"
+              class="absolute bottom-0 left-4 z-10 size-32 translate-y-1/2 rounded-full object-cover" />
+          </div>
+          <!-- Profile Actions -->
+          <div class="my-3 ml-48 flex flex-wrap items-center justify-end gap-4 px-6">
+            <button class="btn-primary">
+              <i data-lucide="plus" class="h-6 w-6" stroke-width="1.75"></i>
+              Follow
+            </button>
+            <button class="btn-icon">
+              <i data-lucide="send" class="icon" stroke-width="1.5"></i>
+            </button>
+            <button class="btn-icon">
+              <i data-lucide="ellipsis" class="icon" stroke-width="1.5"></i>
+            </button>
+          </div>
+          <!-- User Info -->
+          <div class="flex flex-col gap-0.5 p-6">
+            <div class="flex flex-row items-center gap-1">
+              <h2 class="text-xl font-semibold">Helene Syre</h2>
+              <i data-lucide="badge-check" class="text-purple h-6 w-6" stroke-width="1.5"></i>
+            </div>
+            <p class="text-muted">@helenesyre · Joined March 2026</p>
+          </div>
+          <!-- Bio -->
+          <div class="flex max-w-xl flex-col gap-3 px-6">
+            <p class="text-white/80">
+              Bibendum et nec ante dolor. Ac mattis consectetur enim eu amet
+              aliquam adipiscing. Duis tristique faucibus imperdiet tincidunt
+              vehicula.
+            </p>
+            <div class="flex flex-row items-center gap-1">
+              <i data-lucide="link" class="icon text-purple" stroke-width="1.5"></i>
+              <p class="text-purple">helenesyre.no</p>
+            </div>
+            <!-- Tags -->
+            <div class="flex flex-row items-center gap-3">
+              <span class="tag">#photography</span>
+              <span class="tag">#travel</span>
+              <span class="tag">#food</span>
+            </div>
+          </div>
+        </header>
+        <!-- Stats -->
+        <div
+          class="border-border my-6 flex flex-row items-center justify-center gap-6 border-y px-6 py-8 md:gap-8 lg:gap-6 xl:gap-10">
+          <div>
+            <p class="text-2xl font-bold text-white md:text-3xl lg:text-2xl xl:text-3xl">
+              318
+            </p>
+            <p class="text-muted text-sm md:text-base lg:text-sm xl:text-base">
+              Posts
+            </p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white md:text-3xl lg:text-2xl xl:text-3xl">
+              1.2K
+            </p>
+            <p class="text-muted text-sm md:text-base lg:text-sm xl:text-base">
+              Followers
+            </p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white md:text-3xl lg:text-2xl xl:text-3xl">
+              481
+            </p>
+            <p class="text-muted text-sm md:text-base lg:text-sm xl:text-base">
+              Following
+            </p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white md:text-3xl lg:text-2xl xl:text-3xl">
+              72.4k
+            </p>
+            <p class="text-muted text-sm md:text-base lg:text-sm xl:text-base">
+              Likes
+            </p>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="flex flex-row items-center justify-center gap-4 md:gap-10 lg:gap-4 2xl:gap-10">
+          <div class="relative">
+            <button class="mb-3 px-2 text-sm font-semibold text-white md:px-4 lg:px-1 xl:px-6 xl:text-base">
+              Posts
+            </button>
+            <div class="bg-purple absolute right-0 left-0 h-1 rounded-full"></div>
+          </div>
+          <div class="relative">
+            <button class="text-muted mb-3 px-2 text-sm font-semibold md:px-4 lg:px-1 xl:px-6 xl:text-base">
+              Reposts
+            </button>
+            <div class="bg-border absolute right-0 left-0 h-1 rounded-full"></div>
+          </div>
+          <div class="relative">
+            <button class="text-muted mb-3 px-2 text-sm font-semibold md:px-4 lg:px-1 xl:px-6 xl:text-base">
+              Highlights
+            </button>
+            <div class="bg-border absolute right-0 left-0 h-1 rounded-full"></div>
+          </div>
+          <div class="relative">
+            <button class="text-muted mb-3 px-2 text-sm font-semibold md:px-4 lg:px-1 xl:px-6 xl:text-base">
+              Tagged
+            </button>
+            <div class="bg-border absolute right-0 left-0 h-1 rounded-full"></div>
+          </div>
+        </nav>
+        <!-- Post list -->
+        <ol class="flex flex-col gap-5 p-6">
+          <!-- Post card -->
+          <li>
+            <article class="border-border rounded-card bg-surface overflow-hidden border">
+              <div class="p-6">
+                <!-- User -->
+                <div class="flex flex-row items-center gap-4 text-start">
+                  <img src="../assets/images/profile/profile.jpg" alt="Helene Syre profile image"
+                    class="border-purple aspect-square size-10 rounded-full border object-cover" />
+                  <div>
+                    <div class="flex flex-row items-center gap-1">
+                      <h2 class="text-base font-bold">Helene Syre</h2>
+                      <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+                    </div>
+                    <p class="text-muted text-sm">
+                      @helenesyre · Apr 06, 2026
+                    </p>
+                  </div>
+                  <button class="btn-secondary-outline ml-auto text-sm">
+                    Edit
+                  </button>
+                </div>
+                <!-- Post content -->
+                <div class="flex flex-col gap-4">
+                  <div class="mt-4 flex flex-col gap-2">
+                    <h2 class="text-2xl font-semibold">A new beginning!</h2>
+                    <p class="text-muted text-sm">
+                      Just moved to a new city and honestly? Best decision
+                      I've ever made. The energy here is something else
+                      entirely.
+                    </p>
+                  </div>
+                  <div class="flex flex-row items-center gap-3">
+                    <span class="tag-card">#new</span>
+                    <span class="tag-card">#adventure</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post actions -->
+              <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+                  750
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+                  132
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+                  Repost
+                </button>
+                <button class="hover:text-purple ml-auto flex cursor-pointer items-center gap-2">
+                  <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+                  Share
+                </button>
+              </div>
+            </article>
+          </li>
+          <!-- Post card -->
+          <li>
+            <article class="border-border rounded-card bg-surface overflow-hidden border">
+              <div class="p-6">
+                <!-- User -->
+                <div class="flex flex-row items-center gap-4 text-start">
+                  <img src="../assets/images/profile/profile.jpg" alt="Helene Syre profile image"
+                    class="border-purple aspect-square size-10 rounded-full border object-cover" />
+                  <div>
+                    <div class="flex flex-row items-center gap-1">
+                      <h2 class="text-base font-bold">Helene Syre</h2>
+                      <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+                    </div>
+                    <p class="text-muted text-sm">
+                      @helenesyre · Mar 28, 2026
+                    </p>
+                  </div>
+                  <button class="btn-secondary-outline ml-auto text-sm">
+                    Edit
+                  </button>
+                </div>
+                <!-- Post image -->
+                <img src="../assets/images/profile/coffee-post.jpg" alt="Coffee post image"
+                  class="rounded-default mt-4 max-h-72 w-full object-cover" />
+                <!-- Post content -->
+                <div class="flex flex-col gap-4">
+                  <div class="mt-4 flex flex-col gap-2">
+                    <h2 class="text-2xl font-semibold">
+                      Found my new favourite coffee spot in Oslo
+                    </h2>
+                    <p class="text-muted text-sm">
+                      Stumbled across a tiny place on Grünerløkka this
+                      morning. Perfect oat latte, good music, and a window
+                      seat with the best people-watching in the city. Already
+                      looking forward to going back.
+                    </p>
+                  </div>
+                  <div class="flex flex-row items-center gap-3">
+                    <span class="tag-card">#oslo</span>
+                    <span class="tag-card">#coffee</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post actions -->
+              <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+                  1.5K
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+                  300
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+                  Repost
+                </button>
+                <button class="hover:text-purple ml-auto flex cursor-pointer items-center gap-2">
+                  <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+                  Share
+                </button>
+              </div>
+            </article>
+          </li>
+          <!-- Post card -->
+          <li>
+            <article class="border-border rounded-card bg-surface overflow-hidden border">
+              <div class="p-6">
+                <!-- User -->
+                <div class="flex flex-row items-center gap-4 text-start">
+                  <img src="../assets/images/profile/profile.jpg" alt="Helene Syre profile image"
+                    class="border-purple aspect-square size-10 rounded-full border object-cover" />
+                  <div>
+                    <div class="flex flex-row items-center gap-1">
+                      <h2 class="text-base font-bold">Helene Syre</h2>
+                      <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+                    </div>
+                    <p class="text-muted text-sm">
+                      @helenesyre · Mar 16, 2026
+                    </p>
+                  </div>
+                  <button class="btn-secondary-outline ml-auto text-sm">
+                    Edit
+                  </button>
+                </div>
+                <!-- Post image -->
+                <img src="../assets/images/profile/tokyo-post.jpg" alt="Tokyo street food post image"
+                  class="rounded-default mt-4 max-h-72 w-full object-cover" />
+                <!-- Post content -->
+                <div class="flex flex-col gap-4">
+                  <div class="mt-4 flex flex-col gap-2">
+                    <h2 class="text-2xl font-semibold">
+                      First time trying street food in Tokyo
+                    </h2>
+                    <p class="text-muted text-sm">
+                      Stood in line for 40 minutes for takoyaki and would do
+                      it again without hesitation. Something about eating on a
+                      busy street corner just hits different.
+                    </p>
+                  </div>
+                  <div class="flex flex-row items-center gap-3">
+                    <span class="tag-card">#tokyo</span>
+                    <span class="tag-card">#travel</span>
+                    <span class="tag-card">#food</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post actions -->
+              <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+                  1.5K
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+                  300
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+                  Repost
+                </button>
+                <button class="hover:text-purple ml-auto flex cursor-pointer items-center gap-2">
+                  <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+                  Share
+                </button>
+              </div>
+            </article>
+          </li>
+          <!-- Post card -->
+          <li>
+            <article class="border-border rounded-card bg-surface overflow-hidden border">
+              <div class="p-6">
+                <!-- User -->
+                <div class="flex flex-row items-center gap-4 text-start">
+                  <img src="../assets/images/profile/profile.jpg" alt="Helene Syre profile image"
+                    class="border-purple aspect-square size-10 rounded-full border object-cover" />
+                  <div>
+                    <div class="flex flex-row items-center gap-1">
+                      <h2 class="text-base font-bold">Helene Syre</h2>
+                      <i data-lucide="badge-check" class="text-purple icon" stroke-width="1.75"></i>
+                    </div>
+                    <p class="text-muted text-sm">
+                      @helenesyre · Mar 15, 2026
+                    </p>
+                  </div>
+                  <button class="btn-secondary-outline ml-auto text-sm">
+                    Edit
+                  </button>
+                </div>
+                <!-- Post content -->
+                <div class="flex flex-col gap-4">
+                  <div class="mt-4 flex flex-col gap-2">
+                    <h2 class="text-2xl font-semibold">
+                      Film photography is making me slow down
+                    </h2>
+                    <p class="text-muted text-sm">
+                      Switched to a film camera for the month. 36 shots, no
+                      previews, no deleting. It's completely changed how I see
+                      a scene before I shoot it.
+                    </p>
+                  </div>
+                  <div class="flex flex-row items-center gap-3">
+                    <span class="tag-card">#photography</span>
+                    <span class="tag-card">#film</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post actions -->
+              <div class="border-border text-muted flex flex-row items-center gap-4 border-t px-6 py-4 text-sm">
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="heart" class="icon" stroke-width="1.75"></i>
+                  750
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="message-circle" class="icon" stroke-width="1.75"></i>
+                  132
+                </button>
+                <button class="hover:text-purple flex cursor-pointer items-center gap-2">
+                  <i data-lucide="refresh-cw" class="icon" stroke-width="1.75"></i>
+                  Repost
+                </button>
+                <button class="hover:text-purple ml-auto flex cursor-pointer items-center gap-2">
+                  <i data-lucide="share-2" class="icon" stroke-width="1.75"></i>
+                  Share
+                </button>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- Sidebar -->
+    <aside class="border-border rounded-card bg-surface hidden h-fit overflow-hidden border p-6 lg:block">
+      <h2 class="sr-only">Personal Info</h2>
+      <ul class="flex w-full flex-col gap-4">
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Mail</p>
+          <p class="text-base wrap-break-word text-white">hs@example.com</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Phone</p>
+          <p class="text-base text-white">+47 12 34 56 78</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Location</p>
+          <p class="text-base text-white">Oslo, Norway</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Birthday</p>
+          <p class="text-base text-white">Born January 15, 1990</p>
+        </li>
+        <li class="flex flex-col gap-1">
+          <p class="text-muted text-sm">Work</p>
+          <p class="text-base text-white">Web Developer</p>
+        </li>
+      </ul>
+    </aside>
+  </main>
+  <footer
+    class="bg-nav text-muted border-border mt-10 flex flex-col items-center justify-between gap-2 border-t p-4 px-8 pb-24 text-base md:flex-row md:gap-0 md:px-20 lg:px-32 lg:pb-4">
+    <p>&copy; 2026 Thread Inc.</p>
+    <ul class="flex justify-center space-x-4">
+      <li><a href="#" class="hover:underline">Privacy</a></li>
+      <li><a href="#" class="hover:underline">Terms</a></li>
+      <li><a href="#" class="hover:underline">Support</a></li>
+    </ul>
+  </footer>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="../js/nav/nav.js"></script>
+</body>
+
+</html>

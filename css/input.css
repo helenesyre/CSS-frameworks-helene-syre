@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* ────────────────────── Fonts ────────────────────── */
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* ────────────────────── Colors ────────────────────── */
+
+  /* Purple */
+  --color-purple: #7c5cfc;
+  --color-purple-medium: #242039;
+  --color-purple-light: #a78bfa;
+  --color-purple-nav: #1a1628;
+
+  /* Backgrounds */
+  --color-bg: #0f0f13;
+  --color-nav: #0c0c10; /* navigation and footer */
+  --color-surface: #1a1a24; /* cards and modals */
+  --color-surface-light: #22222f; /* input fields */
+
+  /* Text */
+  --color-white: #f0effe; /* primary text */
+  --color-muted: #8882a8; /* secondary text */
+
+  /* Borders */
+  --color-border: #2e2e3f;
+
+  /* ────────────────────── Border radius ────────────────────── */
+  --radius-default: 0.5rem; /* 8px */
+  --radius-icon: 0.375rem; /* 6px */
+  --radius-card: 0.75rem; /* 12px */
+  --radius-full: 9999px; /* fully rounded */
+
+  /* ────────────────────── Gradients ────────────────────── */
+  --gradient-purple: linear-gradient(90deg, #7d5dfc, #a78afa);
+  --gradient-purple-hover: linear-gradient(90deg, #a78afa, #7d5dfc);
+}
+
+@utility bg-gradient-purple {
+  background: var(--gradient-purple);
+}
+
+@utility bg-gradient-purple-hover {
+  background: var(--gradient-purple-hover);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-purple rounded-default hover:bg-gradient-purple-hover flex cursor-pointer items-center justify-center gap-1 px-4 py-2 font-bold text-white transition-transform duration-300 hover:scale-102;
+  }
+
+  .btn-secondary {
+    @apply text-muted rounded-default hover:bg-surface cursor-pointer px-4 py-2 font-bold hover:text-white;
+  }
+
+  .btn-secondary-outline {
+    @apply rounded-default border-border hover:bg-purple-medium text-muted cursor-pointer border px-4 py-2 font-bold hover:text-white;
+  }
+
+  .btn-icon {
+    @apply rounded-icon bg-surface border-border cursor-pointer border p-2.5 text-white;
+  }
+
+  .icon {
+    @apply h-[18px] w-[18px];
+  }
+
+  .link-underline {
+    @apply text-purple-light cursor-pointer hover:underline;
+  }
+
+  .tag {
+    @apply rounded-default bg-surface text-purple-light px-4 py-1 text-sm font-medium;
+  }
+
+  .tag-card {
+    @apply rounded-default bg-purple-medium text-purple-light px-4 py-1 text-sm font-medium;
+  }
+}

@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Join Thread to share your thoughts and connect with people who matter. Sign up or log in to start the conversation." />
+  <title>Thread | Register</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-bg grid min-h-screen grid-rows-[auto_1fr_auto] font-sans">
+  <header id="nav-container" class="bg-nav border-border border-b p-4 px-8 text-white md:px-20 lg:px-32"></header>
+  <main class="grid grid-cols-1 text-white lg:grid-cols-2">
+    <section class="hidden flex-col items-start justify-center gap-5 p-32 lg:flex xl:gap-10">
+      <h1 class="max-w-xl text-5xl font-bold xl:text-7xl xl:leading-24">
+        Every idea starts with a
+        <span class="text-purple-light">thread.</span>
+      </h1>
+      <p class="text-muted text-md xl:text-xl">
+        Thread is the social network built around conversations. Post your
+        thoughts, follow the people who matter, and let ideas weave together.
+      </p>
+    </section>
+
+    <section class="bg-surface border-border border-l px-8 md:px-20 lg:px-16">
+      <div class="my-auto flex h-full flex-col justify-center lg:mx-auto lg:max-w-sm">
+        <h2 class="text-3xl font-semibold xl:text-4xl">Create an account</h2>
+        <nav class="rounded-card bg-bg mt-6 flex gap-2 p-1 text-sm">
+          <a href="../index.html" class="btn-secondary w-full text-center">Sign in</a>
+          <button class="btn-primary w-full">Register</button>
+        </nav>
+        <form class="mt-6 flex flex-col gap-4" action="../index.html" method="GET">
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <label for="name" class="text-muted text-sm uppercase">Name</label>
+              <input type="text" id="name" placeholder="Ola Nordmann" required
+                class="rounded-default bg-bg border-border placeholder-muted focus:ring-purple border p-3 text-sm focus:ring-2 focus:outline-none" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="email" class="text-muted text-sm uppercase">Email</label>
+              <input type="email" id="email" placeholder="your-email@example.com" required
+                class="rounded-default bg-bg border-border placeholder-muted focus:ring-purple border p-3 text-sm focus:ring-2 focus:outline-none" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <label for="password" class="text-muted text-sm uppercase">Password</label>
+              <input type="password" id="password" placeholder="********" minlength="8" required
+                class="rounded-default bg-bg border-border placeholder-muted focus:ring-purple border p-3 text-sm focus:ring-2 focus:outline-none" />
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" id="terms" class="mr-2" required />
+            <label for="terms" class="text-muted text-sm">I agree to the <span class="link-underline">Terms</span> and
+              <span class="link-underline">Privacy Policy</span></label>
+          </div>
+          <button class="btn-primary mt-4">
+            Register<i data-lucide="arrow-right" class="h-6 w-6" stroke-width="1.75"></i>
+          </button>
+          <div class="my-4 flex items-center text-sm">
+            <div class="bg-border h-px flex-1"></div>
+            <span class="text-muted mx-4">or register with</span>
+            <div class="bg-border h-px flex-1"></div>
+          </div>
+          <div class="mb-4 flex flex-row gap-4 text-sm">
+            <button type="button"
+              class="rounded-default border-border bg-surface-light flex w-full cursor-pointer items-center justify-center gap-2 border px-3 py-2 text-white hover:brightness-115">
+              <i class="fa-brands fa-google text-gray-muted text-2xl"></i>
+              Google
+            </button>
+            <button type="button"
+              class="rounded-default border-border bg-surface-light flex w-full cursor-pointer items-center justify-center gap-2 border px-3 py-2 text-white hover:brightness-115">
+              <i class="fa-brands fa-facebook text-gray-muted text-2xl"></i>
+              Facebook
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer
+    class="bg-nav text-muted border-border flex flex-col items-center justify-between gap-2 border-t p-4 px-8 text-base md:flex-row md:gap-0 md:px-20 lg:px-32">
+    <p>&copy; 2026 Thread Inc.</p>
+    <ul class="flex justify-center space-x-4">
+      <li><a href="#" class="hover:underline">Privacy</a></li>
+      <li><a href="#" class="hover:underline">Terms</a></li>
+      <li><a href="#" class="hover:underline">Support</a></li>
+    </ul>
+  </footer>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script type="module" src="../js/nav/nav.js"></script>
+</body>
+
+</html>
