@@ -35,40 +35,47 @@
 
   /* ────────────────────── Gradients ────────────────────── */
   --gradient-purple: linear-gradient(90deg, #7d5dfc, #a78afa);
+  --gradient-purple-hover: linear-gradient(90deg, #a78afa, #7d5dfc);
 }
 
 @utility bg-gradient-purple {
   background: var(--gradient-purple);
 }
 
-.btn-primary {
-  @apply bg-gradient-purple rounded-default flex cursor-pointer items-center justify-center gap-1 px-4 py-2 font-bold text-white;
+@utility bg-gradient-purple-hover {
+  background: var(--gradient-purple-hover);
 }
 
-.btn-secondary {
-  @apply text-muted rounded-default hover:bg-surface cursor-pointer px-4 py-2 font-bold hover:text-white;
-}
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-purple rounded-default hover:bg-gradient-purple-hover flex cursor-pointer items-center justify-center gap-1 px-4 py-2 font-bold text-white transition-transform duration-300 hover:scale-102;
+  }
 
-.btn-secondary-outline {
-  @apply rounded-default border-border hover:bg-purple-medium text-muted cursor-pointer border px-4 py-2 font-bold hover:text-white;
-}
+  .btn-secondary {
+    @apply text-muted rounded-default hover:bg-surface cursor-pointer px-4 py-2 font-bold hover:text-white;
+  }
 
-.btn-icon {
-  @apply rounded-icon bg-surface border-border cursor-pointer border p-2.5 text-white;
-}
+  .btn-secondary-outline {
+    @apply rounded-default border-border hover:bg-purple-medium text-muted cursor-pointer border px-4 py-2 font-bold hover:text-white;
+  }
 
-.icon {
-  @apply h-[18px] w-[18px];
-}
+  .btn-icon {
+    @apply rounded-icon bg-surface border-border cursor-pointer border p-2.5 text-white;
+  }
 
-.link-underline {
-  @apply text-purple-light cursor-pointer hover:underline;
-}
+  .icon {
+    @apply h-[18px] w-[18px];
+  }
 
-.tag {
-  @apply rounded-default bg-surface text-purple-light px-4 py-1 text-sm font-medium;
-}
+  .link-underline {
+    @apply text-purple-light cursor-pointer hover:underline;
+  }
 
-.tag-card {
-  @apply rounded-default bg-purple-medium text-purple-light px-4 py-1 text-sm font-medium;
+  .tag {
+    @apply rounded-default bg-surface text-purple-light px-4 py-1 text-sm font-medium;
+  }
+
+  .tag-card {
+    @apply rounded-default bg-purple-medium text-purple-light px-4 py-1 text-sm font-medium;
+  }
 }
